@@ -1,0 +1,17 @@
+import numpy as np #Importing numpy for number crunching work in Python
+import matplotlib.pyplot as plt #Importing matplotlib for graphing in Python
+plt.rcParams.update({"font.size": 14}) #Changing the font size of every character in the graph
+x_data = np.arange(0,101,10) #arange function allows creating a range eg from 0 to 101 with an increment of 10. We use 101 and not 100 because Python doesn't include the last number
+y_data = pow(x_data, 2) #y data = x_data^2
+noise = np.random.randint(-10,10,11) #random function along with randint (random integer) allows to create a list of random integer numbers, specified here from -10 to 10. 11 means
+                                      there are 11 of these numbers.
+y_data = np.add(y_data, noise) #add the 11 random numbers generated above (called noise) to each of the number in y_data
+fig = plt.figure(1,figsize=(5,5)) #adjust the size of the entire graph to 5 x 5
+plt.semilogy(x_data, y_data, marker ="o",markersize=10,mfc="orange",mec="orange",color = "orange",
+         label="$y=x^2$") #semilog function allows to create log of the data, mfc = markerfacecolor for the points, mec = markeredgecolor for the edge of the point, the $ signs
+                            convert what's inside into mathematical writing. 
+plt.semilogy(x_data, y_data+500, marker ="o",markersize=10,mfc="magenta",mec="magenta",color = "magenta",
+         label="$y=x^2+500$",linestyle = "--") #linestyle = adjust the style of line connecting the points, -- indicates dashed lines.
+plt.xlabel("x_variable")
+plt.ylabel("y_label")
+plt.legend()
