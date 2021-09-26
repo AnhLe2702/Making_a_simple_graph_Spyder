@@ -1,0 +1,11 @@
+rings = {"elves":3,"men":9,"dwarves":7,"sauron":1} #Creating a list of elements for the plot
+fig = plt.figure(1,figsize=(5,5)) #Creating the figure size
+lists = sorted(rings.items(),key=lambda item:item[1]) #Sort the items in the list according to alphabetical order (index [0]) or increasing number (index [1]). The lambda 
+                                                       function is an anonymous function (needs further research into this function, don't quite get it yet).
+x,y=zip(*lists) #zip function allows to unpack the list created above and assign the x and y value accordingly
+#plt.bar(x,y) #ploting a simple canonical bar chart
+#plt.barh(x,y) #ploting a horizontal bar chart
+#plt.pie(y, labels = x) #ploting a simple canonical pie chart with the value is y and labelling according to the names.
+#explode = (0,0.1,0,0) #ploting a exploded pie chart, with a slice slightly detached from the main pie chart. Indicate which segment of the pie is detached, here is the second
+                        segment elves according to the sorted function above.
+plt.pie(y, labels = x, explode=explode)
