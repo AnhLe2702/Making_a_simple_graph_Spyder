@@ -1,0 +1,6 @@
+x_data = np.arange(0,50,1) #Making x values a range of number from 0 to 50 (not including 50) with increment of 1
+y_data = np.arange(0,50,1) #Making y values a range of number from 0 to 50 (not including 50) with increment of 1
+colors = np.arange(0,50,1) #Making a range of colours with each shade associated to a value from 0 to 50 (not including 50)
+area = np.random.rand(50)**2*1000 #Indicate the representation size for each number randomly and increase that 2000 times from the default size
+fig = plt.figure(1,figsize=(5,5))
+plt.scatter(x_data,y_data,c = colors,s=area,alpha=0.5) #c is Python short for the colour function, s is Python short for area, alpha is for transparency
