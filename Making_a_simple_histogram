@@ -1,0 +1,2 @@
+failure_data = np.random.normal(size=300)*200 #generate 300 random datapoints and time the value of each datapoint by 200
+plt.hist(failure_data,bins=20) #plot the histogram, bins command is to group these 300 datapoints into 20 columns.
