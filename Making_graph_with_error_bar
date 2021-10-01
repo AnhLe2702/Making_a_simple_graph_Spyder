@@ -1,0 +1,8 @@
+x_data=np.arange(0,2*np.pi+0.1,np.pi/6) #Set a range for x_data from 0 to 2*pi+0.1, with pi/6 interval.
+y_data=np.sin(x_data) #Set y_data to be equal to sin(x_data)
+y_error=np.linspace(0,2,13) #Set the error bar in the y axis going from 0 to 2 sequentially from the 1st to the 13th data point.
+x_error=np.linspace(0,0.5,13) #Set the error bar in the x axis going from 0 to 0.5 sequentially from the 1st to the 13th data point.
+fig = plt.figure(1,figsize=(5,5)) #Set figure size
+plt.errorbar(x_data,y_data,yerr=y_error,xerr=x_error,capsize=5,marker='o',color='orange',mfc="w",linestyle="none",
+             markersize=10,ecolor="blue") #capsize to draw the little cap at each end of the error bar, linestyle to determine the style of the connecting line, markersize dictate
+             the size of the marker points, ecolor dictate, the colour of the error bar.
